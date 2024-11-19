@@ -12,6 +12,9 @@ export default defineConfig({
 		solidPlugin()
 	],
 	server: { port: 3000 },
-	build: { target: "esnext" },
+	build: {
+		target: "esnext",
+		rollupOptions: { treeshake: { moduleSideEffects: id => !id.includes(`/node_modules/internet-address/`) } }
+	},
 	base: ``
 })
