@@ -1,0 +1,15 @@
+name: Page
+on: { push: }
+permissions: { contents: read, pages: write, id-token: write }
+
+jobs:
+  page:
+    runs-on: ubuntu-latest
+
+    steps:
+    - { name: Checkout, uses: actions/checkout@v4 }
+    - { name: Setup Node.js environment, uses: actions/setup-node@v4, with: { node-version: ^18.20 || ^20.10 || >=22 } }
+    - { name: Setup pnpm, uses: pnpm/action-setup@v4, with: { version: ^9, run_install: true } }
+    - run: pnpm build
+    - { name: Upload GitHub Pages artifact, uses: actions/upload-pages-artifact@v3, with: { path: dist } }
+    - { name: Deploy GitHub Pages site, uses: actions/deploy-pages@v4 }
