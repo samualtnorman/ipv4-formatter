@@ -1,0 +1,20 @@
+:root {
+	font-size: clamp(16px, 3vw, 20px);
+	line-height: 1.5;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+		"Droid Sans", "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin: auto;
+	max-width: min(65ch,calc(100% - 2em))
+}
+*, *::before, *::after { box-sizing: border-box }
+* { margin: 0; min-width: 0 }
+input, button, textarea, select { font: inherit }
+p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word }
+th { text-align: left }
+#root, #__next { isolation: isolate }
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace
+}
