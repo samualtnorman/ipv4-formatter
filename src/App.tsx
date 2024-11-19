@@ -91,6 +91,7 @@ export default () => {
 		<PartFormatSelect setter={setThirdPartFormat} disabled={getParts() < 3}/>
 		<PartFormatSelect setter={setFourthPartFormat} disabled={getParts() < 4}/>
 		<p><b>Formatted:</b> {getFormattedIp()}</p>
+		<p><a href="https://github.com/samualtnorman/ipv4-formatter" target="_blank">View the source code.</a></p>
 	</>
 
 	function handlePartsCountInput(inputElement: HTMLInputElement) {
