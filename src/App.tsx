@@ -92,6 +92,7 @@ export default () => {
 		<PartFormatSelect setter={setFourthPartFormat} disabled={getParts() < 4}/>
 		<p><b>Formatted:</b> {getFormattedIp()}</p>
 		<p><a href="https://github.com/samualtnorman/ipv4-formatter" target="_blank">View the source code.</a></p>
+		<p>This is a demo that uses my <a href="https://www.npmjs.com/package/internet-address" target="_blank"><code>internet-address</code> NPM package</a>.</p>
 	</>
 
 	function handlePartsCountInput(inputElement: HTMLInputElement) {
