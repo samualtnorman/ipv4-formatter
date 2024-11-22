@@ -95,7 +95,11 @@ export default () => {
 		<PartFormatSelect setter={setSecondPartFormat} disabled={getParts() < 2}/>
 		<PartFormatSelect setter={setThirdPartFormat} disabled={getParts() < 3}/>
 		<PartFormatSelect setter={setFourthPartFormat} disabled={getParts() < 4}/>
-		<p><b>Formatted:</b> {getFormattedIp()}</p>
+
+		{getFormattedIp()
+			? <p><b>Formatted:</b> {getFormattedIp()}</p>
+			: <p style={{ color: `red`, "font-weight": `bold` }}>Invalid IPv4 address.</p>
+		}
 
 		<p><a href="https://github.com/samualtnorman/ipv4-formatter" target="_blank" rel="noreferrer">
 			View the source code.
