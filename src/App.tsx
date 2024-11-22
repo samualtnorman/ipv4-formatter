@@ -73,14 +73,19 @@ export default () => {
 					<th>Parts:</th>
 
 					<td>
-						<input
-							type="number"
-							value="4"
-							min="1"
-							max="4"
-							onInput={({ currentTarget }) => handlePartsCountInput(currentTarget)}
-							ref={inputElement => setTimeout(() => handlePartsCountInput(inputElement))}
-						/>
+						<select onInput={({ currentTarget }) => {
+							const partsCount = Number(currentTarget.value)
+
+							if (!isPartsCount(partsCount))
+								throw Error(`!isPartsCount(partsCount)`)
+
+							setParts(partsCount)
+						}}>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4" selected>4</option>
+						</select>
 					</td>
 				</tr>
 			</tbody>
@@ -104,12 +109,5 @@ export default () => {
 			.
 		</p>
 	</>
-
-	function handlePartsCountInput(inputElement: HTMLInputElement) {
-		const partsCount = Number(inputElement.value)
-
-		if (isPartsCount(partsCount))
-			setParts(partsCount)
-	}
 }
 
