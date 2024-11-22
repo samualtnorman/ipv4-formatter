@@ -101,6 +101,8 @@ export default () => {
 			: <p style={{ color: `red`, "font-weight": `bold` }}>Invalid IPv4 address.</p>
 		}
 
+		<div style="flex-grow: 2"/>
+
 		<p><a href="https://github.com/samualtnorman/ipv4-formatter" target="_blank" rel="noreferrer">
 			View the source code.
 		</a></p>
