@@ -1,3 +1,12 @@
+# IPv4 Formatter
+This is a demo using the [`internet-address`](https://www.npmjs.com/package/internet-address) NPM package and is hosted at https://samualtnorman.github.io/ipv4-formatter/.
+
+[View documentation for `internet-address`.](https://samualtnorman.github.io/internet-address/)
+
+Below are the instructions on how to use [SolidStart](https://start.solidjs.com/) which was used to build this demo.
+
+---
+
 ## Usage
 
 Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
