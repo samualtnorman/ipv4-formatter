@@ -42,6 +42,8 @@ export default () => {
 		>
 			<option value="decimal" selected>Decimal</option>
 			<option value="octal">Octal</option>
+			<option value="upper-hex">Uppercase Hex</option>
+			<option value="lower-hex">Lowercase Hex</option>
 		</select>
 
 		function handleInput(inputElement: HTMLSelectElement) {
@@ -50,6 +52,12 @@ export default () => {
 
 			if (inputElement.value == `octal`)
 				props.setter(IPv4ToStringFormatFormat.Octal)
+
+			if (inputElement.value == `upper-hex`)
+				props.setter(IPv4ToStringFormatFormat.UpperHexadecimal)
+
+			if (inputElement.value == `lower-hex`)
+				props.setter(IPv4ToStringFormatFormat.LowerHexadecimal)
 		}
 	}
 	
